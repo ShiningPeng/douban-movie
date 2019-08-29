@@ -1,18 +1,17 @@
-初始化
-src->common->styles->reset.styl 重置默认样式
-安装stylus
-npm install stylus  stylus-loader -D
-建相关的文件夹
-在main.js或者在App.vue中引入重置样式文件
-1.封装scrollview页面滚动效果的组件:
+## 笔记
+- 初始化
+- src->common->styles->reset.styl 重置默认样式
+- 安装stylus  ：npm install stylus  stylus-loader -D
+- 在main.js或者在App.vue中引入重置样式文件
+1. 封装scrollview页面滚动效果的组件:
 npm install better-scroll
 import BScroll from 'better-scroll'
-2.common/js/components.js
+2. common/js/components.js
 全局注册组件
 main.js中import
 import globalComponents from 'common/js/components'
 Vue.use(globalComponents );
-3.图片懒加载 vue-lazyload依赖
+3. 图片懒加载 vue-lazyload依赖
 npm install vue-lazyload --save-dev
 在main.js中引入
 import VueLazyload from 'vue-lazyload';
@@ -23,7 +22,7 @@ Vue.use(VueLazyload, {
 <img v-lazy="item.poster" alt="" width="100%" height="100%">
 其中的v-lazy属性
 
-4.axios的简单封装
+4. axios的简单封装
 一般是做响应拦截和请求拦截
 
 5. Recommend和ListBlock页面通信
