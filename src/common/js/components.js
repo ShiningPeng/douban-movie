@@ -12,10 +12,8 @@ export default {
     requireComponent.keys().forEach(fileName => {
       // 获取组件配置
       const componentConfig = requireComponent(fileName)
-
       // 获取组件的 PascalCase 命名
       const componentName = fileName.replace(/^\.\/(.*)\.\w+$/, '$1')
-
       // 全局注册组件
       Vue.component(
         componentName,
